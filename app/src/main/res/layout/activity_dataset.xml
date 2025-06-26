@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#009688"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_arrow_back_24"
+                app:tint="@android:color/white"
+                android:contentDescription="Kembali" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Halaman Dataset"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="12dp"
+            android:elevation="6dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dataset ini digunakan untuk memprediksi kemungkinan kekambuhan kanker tiroid berdasarkan data medis pasien. Dataset ini terdiri dari 16 kolom fitur dan diambil dari Kaggle."
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:text="Link Dataset: https://www.kaggle.com/datasets/abuchionwuegbusi/thyroid-cancer-recurrence-prediction"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contoh 5 Data Pertama"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="12dp"
+            android:elevation="6dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <TableLayout
+                    android:id="@+id/tableLayoutDataset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:background="#F0F0F0"
+                    android:padding="8dp">
+
+                    <TableRow>
+                        <TextView android:text="Age" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="Gender" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="Smoking" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="Hx Smoking" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="Hx Radiothreapy" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="Thyroid Function" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="Physical Exam" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="Adenopathy" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="Pathology" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="Focality" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="Risk" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="T" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="N" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="M" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="Stage" android:textStyle="bold" android:padding="6dp" />
+                        <TextView android:text="Response" android:textStyle="bold" android:padding="6dp" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView android:text="45" android:padding="6dp" />
+                        <TextView android:text="F" android:padding="6dp" />
+                        <TextView android:text="Yes" android:padding="6dp" />
+                        <TextView android:text="No" android:padding="6dp" />
+                        <TextView android:text="No" android:padding="6dp" />
+                        <TextView android:text="Euthyroid" android:padding="6dp" />
+                        <TextView android:text="Multinodular goiter" android:padding="6dp" />
+                        <TextView android:text="No" android:padding="6dp" />
+                        <TextView android:text="Papillary" android:padding="6dp" />
+                        <TextView android:text="Unifocal" android:padding="6dp" />
+                        <TextView android:text="Low" android:padding="6dp" />
+                        <TextView android:text="T1" android:padding="6dp" />
+                        <TextView android:text="N0" android:padding="6dp" />
+                        <TextView android:text="M0" android:padding="6dp" />
+                        <TextView android:text="Stage I" android:padding="6dp" />
+                        <TextView android:text="Excellent" android:padding="6dp" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView android:text="60" android:padding="6dp" />
+                        <TextView android:text="M" android:padding="6dp" />
+                        <TextView android:text="No" android:padding="6dp" />
+                        <TextView android:text="Yes" android:padding="6dp" />
+                        <TextView android:text="No" android:padding="6dp" />
+                        <TextView android:text="Clinical Hyperthyroidism" android:padding="6dp" />
+                        <TextView android:text="Single nodular goiter-left" android:padding="6dp" />
+                        <TextView android:text="Yes" android:padding="6dp" />
+                        <TextView android:text="Follicular" android:padding="6dp" />
+                        <TextView android:text="Multifocal" android:padding="6dp" />
+                        <TextView android:text="High" android:padding="6dp" />
+                        <TextView android:text="T3" android:padding="6dp" />
+                        <TextView android:text="N1" android:padding="6dp" />
+                        <TextView android:text="M0" android:padding="6dp" />
+                        <TextView android:text="Stage II" android:padding="6dp" />
+                        <TextView android:text="Indeterminate" android:padding="6dp" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView android:text="38" android:padding="6dp" />
+                        <TextView android:text="F" android:padding="6dp" />
+                        <TextView android:text="No" android:padding="6dp" />
+                        <TextView android:text="No" android:padding="6dp" />
+                        <TextView android:text="Yes" android:padding="6dp" />
+                        <TextView android:text="Subclinical Hypothyroidism" android:padding="6dp" />
+                        <TextView android:text="Multinodular goiter" android:padding="6dp" />
+                        <TextView android:text="No" android:padding="6dp" />
+                        <TextView android:text="Medullary" android:padding="6dp" />
+                        <TextView android:text="Unifocal" android:padding="6dp" />
+                        <TextView android:text="Intermediate" android:padding="6dp" />
+                        <TextView android:text="T2" android:padding="6dp" />
+                        <TextView android:text="N0" android:padding="6dp" />
+                        <TextView android:text="M1" android:padding="6dp" />
+                        <TextView android:text="Stage III" android:padding="6dp" />
+                        <TextView android:text="Incomplete" android:padding="6dp" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView android:text="50" android:padding="6dp" />
+                        <TextView android:text="M" android:padding="6dp" />
+                        <TextView android:text="Yes" android:padding="6dp" />
+                        <TextView android:text="Yes" android:padding="6dp" />
+                        <TextView android:text="Yes" android:padding="6dp" />
+                        <TextView android:text="Euthyroid" android:padding="6dp" />
+                        <TextView android:text="Single nodular goiter-right" android:padding="6dp" />
+                        <TextView android:text="No" android:padding="6dp" />
+                        <TextView android:text="Anaplastic" android:padding="6dp" />
+                        <TextView android:text="Multifocal" android:padding="6dp" />
+                        <TextView android:text="High" android:padding="6dp" />
+                        <TextView android:text="T4" android:padding="6dp" />
+                        <TextView android:text="N1" android:padding="6dp" />
+                        <TextView android:text="M1" android:padding="6dp" />
+                        <TextView android:text="Stage IV" android:padding="6dp" />
+                        <TextView android:text="Poor" android:padding="6dp" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView android:text="43" android:padding="6dp" />
+                        <TextView android:text="F" android:padding="6dp" />
+                        <TextView android:text="No" android:padding="6dp" />
+                        <TextView android:text="No" android:padding="6dp" />
+                        <TextView android:text="No" android:padding="6dp" />
+                        <TextView android:text="Clinical Hypothyroidism" android:padding="6dp" />
+                        <TextView android:text="Multinodular goiter" android:padding="6dp" />
+                        <TextView android:text="Yes" android:padding="6dp" />
+                        <TextView android:text="Papillary" android:padding="6dp" />
+                        <TextView android:text="Unifocal" android:padding="6dp" />
+                        <TextView android:text="Low" android:padding="6dp" />
+                        <TextView android:text="T1" android:padding="6dp" />
+                        <TextView android:text="N0" android:padding="6dp" />
+                        <TextView android:text="M0" android:padding="6dp" />
+                        <TextView android:text="Stage I" android:padding="6dp" />
+                        <TextView android:text="Excellent" android:padding="6dp" />
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
